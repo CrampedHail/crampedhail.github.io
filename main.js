@@ -15,9 +15,9 @@ closeModal.addEventListener('click', () => {
 });
 
 let javaGalleryItems = 
-["http://127.0.0.1:5500/Images/battleships.png", "http://127.0.0.1:5500/Images/hangman.png", 
-"http://127.0.0.1:5500/Images/polacz4.png", "http://127.0.0.1:5500/Images/tanks.png", 
-"http://127.0.0.1:5500/Images/tictactoe.png"];
+["/Images/battleships.png", "http://127.0.0.1:5500/Images/hangman.png", 
+"/Images/polacz4.png", "/Images/tanks.png", 
+"/Images/tictactoe.png"];
 let currJavaImg = document.querySelector('.java-img');
 let prevJavaImg = document.querySelector('.prev-java-img');
 prevJavaImg.addEventListener('click', ()=>{
@@ -29,9 +29,9 @@ nextJavaImg.addEventListener('click', ()=>{
 });
 
 let pbxGalleryItems = 
-["http://127.0.0.1:5500/Images/pbx.png", "http://127.0.0.1:5500/Images/pbx-ogl.png", 
-"http://127.0.0.1:5500/Images/pbx-login.png", "http://127.0.0.1:5500/Images/pbx-konto.png", 
-"http://127.0.0.1:5500/Images/pbx-admin.png"];
+["/Images/pbx.png", "/Images/pbx-ogl.png", 
+"/Images/pbx-login.png", "/Images/pbx-konto.png", 
+"/Images/pbx-admin.png"];
 let currPbxImg = document.querySelector('.pbx-img');
 let prevPbxImg = document.querySelector('.prev-pbx-img');
 prevPbxImg.addEventListener('click', ()=>{
