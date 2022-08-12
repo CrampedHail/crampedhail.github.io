@@ -15,9 +15,9 @@ closeModal.addEventListener('click', () => {
 });
 
 let javaGalleryItems = 
-["/Images/battleships.png", "/Images/hangman.png", 
-"/Images/polacz4.png", "/Images/tanks.png", 
-"/Images/tictactoe.png"];
+["crampedhail.github.io/Images/battleships.png", "crampedhail.github.io/Images/hangman.png", 
+"crampedhail.github.io/Images/polacz4.png", "crampedhail.github.io/Images/tanks.png", 
+"crampedhail.github.io/Images/tictactoe.png"];
 let currJavaImg = document.querySelector('.java-img');
 let prevJavaImg = document.querySelector('.prev-java-img');
 prevJavaImg.addEventListener('click', ()=>{
