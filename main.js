@@ -15,7 +15,7 @@ closeModal.addEventListener('click', () => {
 });
 
 let javaGalleryItems = 
-["/Images/battleships.png", "http://127.0.0.1:5500/Images/hangman.png", 
+["/Images/battleships.png", "/Images/hangman.png", 
 "/Images/polacz4.png", "/Images/tanks.png", 
 "/Images/tictactoe.png"];
 let currJavaImg = document.querySelector('.java-img');
