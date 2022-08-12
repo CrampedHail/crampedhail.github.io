@@ -56,6 +56,8 @@ function currentImg(image, imgCollection){
             ind = imgCollection.indexOf(img);
         }
     })
+    console.log(ind)
+    console.log(image)
     return ind;
 }
 
