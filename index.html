@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/Images/person.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Paweł Brandt - Portfolio</title>
+</head>
+<body onload="setTheme()">
+    <header>
+        <nav class="navigation-bar">
+            <a class="fancy-link main-link" href="#main">Strona Główna</a>
+            <a class="fancy-link" href="#about">O mnie</a>
+            <a class="fancy-link" href="#cv">Curriculum Vitae</a>
+            <a class="fancy-link" href="#projects">Projekty</a>
+            <a class="fancy-link" href="#contact">Kontakt</a>
+        </nav>
+    </header>
+    
+    <div class="main">
+        <section id="main">
+            <h1 class="name">Paweł Brandt</h1>
+            <label>Wybierz język / Choose language</label>
+            <div class="flex-center-row">
+                <a class="lang-ver" href="index.html">
+                    <img src="/Images/polish_flag.jpeg" alt="Polska Wersja" height="32" width="51">
+                </a>
+                <a class="lang-ver" href="index-en.html">
+                    <img src="/Images/eng-usa.png" alt="English Version" height="32" width="51">
+                </a>
+            </div>
+            <div class="flex-center">
+                <label for="theme-switch">Zmień motyw</label>
+                <div class="flex-center-row">
+                    <i class="fas fa-sun" style="font-size:30px"></i>
+                    <label class="switch">
+                        <input type="checkbox" class="theme-switch">
+                        <div class="slider round"></div>
+                    </label>
+                    <i class="fas fa-moon" style="font-size:25px"></i>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <h1>O mnie</h1>
+            <p>
+                Nazywam się Paweł Aleksander Brandt i jestem studentem III roku Informatyki w <a class="link" href="https://ans-elblag.pl/" title="Strona ANS w Elblągu">Akademii Nauk Stosowanych w Elblągu</a> w Instytucie Informatyki Stosowanej imienia Krzysztofa Brzeskiego. Z natury jestem spokojny, cierpliwy i miły oraz potrafię sprawnie pracować w zespole. Staram się pracować mądrze, a niekoniecznie ciężko. Jednym z moich hobby jest programowanie co sprawia, że pisząc kod nigdy się nudzę. Obecnie skupiam się na doskonaleniu swoich umiejętności w językach C# oraz Python.
+            </p>
+        </section>
+        <section id="cv">
+            <h1>Curriculum Vitae <a title="Pobierz CV" href="/Download/Brandt Paweł - CV PL.pdf" class="fa fa-download" aria-hidden="true" download></a></h1>
+            
+            <h2>Umiejętności</h2>
+            <ul>
+                <li>
+                    Programowanie w językach:
+                    <table class="prog-lang">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Java
+                                </td>
+                                <td>
+                                    - poziom średni
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    C#
+                                </td>
+                                <td>
+                                    - poziom średni
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    C++
+                                </td>
+                                <td>
+                                    - poziom podstawowy
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    C
+                                </td>
+                                <td>
+                                    - poziom podstawowy
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Python
+                                </td>
+                                <td>
+                                    - poziom podstawowy
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    JavaScript
+                                </td>
+                                <td>
+                                    - poziom podstawowy
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    SQLServer
+                                </td>
+                                <td>
+                                    - poziom podstawowy
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    MySQL
+                                </td>
+                                <td>
+                                    - poziom podstawowy
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li>
+                    Znajomość języka angielskiego - poziom średniozaawansowany
+                </li>
+            </ul>
+            
+
+            <h2>Wykształcenie</h2>
+            <table class="education">
+                <tbody>
+                    <tr>
+                        <td class="time">
+                            <span>2019 - Obecnie</span>
+                        </td>
+                        <td>
+                            <span>Akademia Nauk Stosowanych w Elblągu</span><br/>
+                            <span class="spec">Specjalizacja: Programowanie</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="time">
+                            <span>2016 - 2019</span>
+                        </td>
+                        <td>
+                            <span>II Liceum Ogólnokształcące im. Jana III Sobieskiego w Tczewie</span><br/>
+                            <span class="spec">Specjalizacja: Matematyka Informatyka</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="time">
+                            <span>2012 - 2016</span>
+                        </td>
+                        <td>
+                            <span>Państwowa Szkoła Muzyczna im. Janiny Garści w Tczewie</span><br/>
+                            <span class="spec">Specjalizacja: Gitara Klasyczna</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <h2>Zainteresowania</h2>
+            <ul>
+                <li>Gra na gitarze i pianinie</li>
+                <li>Układanie kostek Rubika</li>
+                <li>Czytanie książek</li>
+                <li>Słuchanie muzyki</li>
+                <li>Programowanie</li>
+            </ul>  
+
+            <h2>Certyfikaty</h2>
+            <ul>
+                <li>05.2022 — Fundamenty programowania w języku C# <br><a class="link" href="https://strefakursow.pl">strefakursow.pl</a></li>
+            </ul>      
+        </section>
+        <section id="projects">
+            <h1>Projekty</h1>
+            <div class="flex-center">
+                <h2>Serwis Ogłoszeniowy PBX</h2>
+                <div class="gallery">
+                    <a class="fa fa-arrow-left prev-pbx-img" title="Poprzednie zdjęcie"></a>
+                    <div class="canvas canvas-pbx">
+                        <img class="curr-img img pbx-img" src="/Images/pbx.png">
+                    </div>
+                    <a class="fa fa-arrow-right next-pbx-img" title="Następne zdjęcie"></a>
+                </div>
+                <a class="link" href="https://github.com/CrampedHail/PBX.git" title="Przejdź do Githuba z projektem"><i class="fa fa-github fa-small" ></i>GitHub</a>
+                <p>
+                    Zainspirowany serwisem ogłoszeniowym OLX stworzyłem aplikację internetową o nazwie "PBX" przypominającą właśnie ten serwis. Projekt wykonałem za pomocą technologii ASP.NET Framework w języku C# oraz we wzorcu MVC. 
+                </p> 
+            </div>  
+            <div class="flex-center">
+                <h2>Harmoniczny Algorytm Optymalizacji</h2>
+                <img class="img" src="/Images/harmonic.png" alt="Harmoniczny Algorytm Optymalizacji">
+                <a class="link" href="https://github.com/CrampedHail/ArtificialIntelligence.git" title="Przejdź do Githuba z projektem"><i class="fa fa-github fa-small" ></i>GitHub</a>
+                <p>
+                    Projekt ma na celu zaimplementowanie harmonicznego algorytmu optymalizacji na potrzeby, wymyślonego przeze mnie i kolegów, <a class="link" href="https://pl.wikipedia.org/wiki/Problem_plecakowy" title="Definicja Problemu Plecakowego">problemu plecakowego</a>. Sam pomysł problemu zainspirowany jest grami komputerowymi. Owy problem polega na znalezieniu najtańszego zestawu przedmiotów, a zadaniem projektu jest odnalezienie takiego zestawu, którego statystyki będą większe od statystyk przeciwnika. Zrzut ekranu przedstawia 10 zestawów przedmiotów oraz ich ceny. Pamięć początkowa to 10 losowych zestawów, a pamięć końcowa to 10 najlepszych. Jak widać na zrzucie ekranu powyżej, ceny zestawów zmiejszyły się prawie dwukrotnie.
+                </p> 
+            </div>    
+            <div class="flex-center">
+                <h2>Mini-Gry w języku Java</h2>
+                <div class="gallery">
+                    <a class="fa fa-arrow-left prev-java-img" title="Poprzednie zdjęcie"></a>
+                    <div class="canvas canvas-java">
+                        <img class="curr-img img java-img" src="/Images/battleships.png">
+                    </div>
+                    <a class="fa fa-arrow-right next-java-img" title="Następne zdjęcie"></a>
+                </div>
+                <a class="link" href="https://github.com/CrampedHail/Java-Projects.git" title="Przejdź do Githuba z projektami"><i class="fa fa-github fa-small" ></i>GitHub</a>
+                <p>
+                    Wszystkie mini-gry powstały w wolnym czasie od studiów w języku Java. Z racji prostoty użycia została wykorzystana biblioteka Swing do zaimplementowania GUI.
+                </p> 
+            </div>   
+        </section>
+        <section id="contact">
+            <h1>Kontakt</h1>
+            <table class="contact">
+                <tbody>
+                    <tr>
+                        <td class="type">
+                            Numer telefonu:
+                        </td>
+                        <td>
+                            <a class="link" href="tel:511-644-505" title="Naciśnij aby zadzwonić">+48 511-644-505</a>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td class="type">
+                            Adres mailowy:
+                        </td>
+                        <td>
+                            
+                            <a class="link" href="mailto:pawel.a.brandt@gmail.com" title="Naciśnij aby wysłać maila">pawel.a.brandt@gmail.com</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <label class="social-media">Media Społecznościowe:</label>
+            <div id="social-media">
+                <a title="LinkedIn" href="https://www.linkedin.com/in/pawe%C5%82-brandt-0b2893233/" class="fa fa-linkedin"></a>
+                <a title="GitHub" href="https://github.com/CrampedHail" class="fa fa-github"></a>
+            </div>
+        </section>
+    </div>
+
+    <dialog class="modal" id="modal">
+        <img class="dialog-img" src="" >
+        <a class="close-button">Zamknij</a>
+    </dialog>
+
+    <script src="main.js"></script>
+</body>
+</html>
