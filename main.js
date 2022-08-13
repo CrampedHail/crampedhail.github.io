@@ -99,6 +99,7 @@ function enableDarkMode(){
 function setTheme(){
     if(darkMode=='disabled'){
         enableLightMode();
+        themeSwitch.checked = false;
     }
     else if(darkMode=='enabled'){
         enableDarkMode();
@@ -111,6 +112,7 @@ function setTheme(){
         }
         else{
             enableLightMode();
+            themeSwitch.checked = false;
         }
     }
 }

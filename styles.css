@@ -427,7 +427,7 @@ label.switch{
 
 
 
-@media(prefers-color-scheme: dark){
+/* @media(prefers-color-scheme: dark){
     :root{
         color-scheme: dark light;
         --background-color: #212121;
@@ -435,7 +435,7 @@ label.switch{
         --gradient-color-1: rgb(255, 100, 255);
         --gradient-color-2: #6fcfff;
     }
-}
+} */
 @media(max-width: 1050px) {
     .main-link{
         grid-column: 1 / span 4;
