@@ -1,3 +1,4 @@
+//Galleries
 let openModal = document.querySelectorAll('.img');
 const modal = document.querySelector('.modal');
 const modalImg = document.querySelector('.dialog-img');
@@ -15,9 +16,9 @@ closeModal.addEventListener('click', () => {
 });
 
 let javaGalleryItems = 
-["crampedhail.github.io/Images/battleships.png", "crampedhail.github.io/Images/hangman.png", 
-"crampedhail.github.io/Images/polacz4.png", "crampedhail.github.io/Images/tanks.png", 
-"crampedhail.github.io/Images/tictactoe.png"];
+["/Images/battleships.png", "/Images/hangman.png", 
+"/Images/polacz4.png", "/Images/tanks.png", 
+"/Images/tictactoe.png"];
 let currJavaImg = document.querySelector('.java-img');
 let prevJavaImg = document.querySelector('.prev-java-img');
 prevJavaImg.addEventListener('click', ()=>{
@@ -51,16 +52,17 @@ function switchImg(destInd, imgCollection){
 }
 function currentImg(image, imgCollection){
     let ind = 0;
+    image = image.substring(image.indexOf("/Images"), image.length-1)
     imgCollection.forEach((img)=>{
         if(img.match(image)) {
             ind = imgCollection.indexOf(img);
         }
     })
-    console.log(ind)
-    console.log(image)
     return ind;
 }
 
+
+//Themes
 let darkMode = localStorage.getItem('darkmode');
 let themeSwitch = document.querySelector('.theme-switch');
 themeSwitch.addEventListener('click', ()=>{
@@ -112,3 +114,62 @@ function setTheme(){
         }
     }
 }
+
+
+//Write Animation
+var TxtType = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+    }
+
+    setTimeout(function() {
+    that.tick();
+    }, delta);
+};
+
+window.onload = function() {
+    var elements = document.getElementsByClassName('typewrite');
+    for (var i=0; i<elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
+        }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+    document.body.appendChild(css);
+};

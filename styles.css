@@ -149,6 +149,9 @@ h1, h2, h3{
 .link:hover{
     background-size: 100% 2px;
 }
+span.wrap{
+    border-color: var(--main-color) !important;
+}
 
 
 /* Layout styling */
@@ -168,6 +171,7 @@ li{
 table{
     border-collapse: collapse ;
 }
+table.skills,
 table.contact,
 table.education{
     display: flex;
@@ -180,7 +184,7 @@ table.contact > tbody > tr > td.type{
 }
 td{
     border-top: solid transparent .5rem;
-    border-top: solid transparent .5rem;
+    border: solid transparent .5rem;
 }
 th{
     text-align: end;
@@ -201,6 +205,7 @@ span.spec{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
 }
 a.lang-ver{
     margin-left: .5rem;
@@ -299,6 +304,10 @@ img{
 
 .flex-center > img{
     margin: 1.5rem 0px;
+}
+div.my-pic > img.my-pic{
+    width: 100%;
+    border-radius: 50%;
 }
 
 
