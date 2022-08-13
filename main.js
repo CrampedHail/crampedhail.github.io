@@ -97,6 +97,7 @@ function enableDarkMode(){
 }
 
 function setTheme(){
+    console.log(darkMode)
     if(darkMode=='disabled'){
         enableLightMode();
         themeSwitch.checked = false;
@@ -116,6 +117,7 @@ function setTheme(){
         }
     }
 }
+window.onload = setTheme();
 
 
 //Write Animation
