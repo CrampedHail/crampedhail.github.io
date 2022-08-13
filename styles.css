@@ -163,12 +163,18 @@ table.prog-lang{
 ul{
     margin-top:0px;
     padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 li{
     margin-bottom: 1rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+}
+li > i{
+    margin: 0px .5rem;
 }
 table{
     border-collapse: collapse ;
@@ -285,6 +291,7 @@ a.lang-ver{
     max-width: 100%;
     width: 100%;
     margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
 }
 .gallery > a{
     position:inherit;
@@ -326,6 +333,10 @@ div.my-pic{
 div.my-pic > img.my-pic{
     width: 100%;
     border-radius: 50%;
+}
+
+div.flex-center.nested{
+    margin: 0px;
 }
 
 p.vertical{
