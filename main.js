@@ -78,6 +78,7 @@ function enableLightMode(){
     document.documentElement.style.setProperty('--background-color', '#F9F9F9');
     document.documentElement.style.setProperty('--main-color', '#303030');
     document.documentElement.style.setProperty('--secondary-color', '#A0A0A0');
+    document.documentElement.style.setProperty('--third-color', '#E8E8E8');
     document.documentElement.style.setProperty('--gradient-color-1', 'red');
     document.documentElement.style.setProperty('--gradient-color-2', 'blue');
     document.documentElement.style.setProperty('color-scheme', 'light dark');
@@ -89,6 +90,7 @@ function enableDarkMode(){
     document.documentElement.style.setProperty('--background-color', '#212121');
     document.documentElement.style.setProperty('--main-color', '#F9F9F9');
     document.documentElement.style.setProperty('--secondary-color', '#A9A9A9');
+    document.documentElement.style.setProperty('--third-color', '#303030');
     document.documentElement.style.setProperty('--gradient-color-1', 'rgb(255, 100, 255)');
     document.documentElement.style.setProperty('--gradient-color-2', '#6fcfff');
     document.documentElement.style.setProperty('--img-shadow-color', '#2F2F2F');

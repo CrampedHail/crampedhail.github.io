@@ -4,6 +4,7 @@
     --main-color: #303030;
     --img-shadow-color: gray;
     --secondary-color: #A0A0A0;
+    --third-color: #DDDDDD;
     --gradient-color-1: red;
     --gradient-color-2: blue;
     overscroll-behavior: none;
@@ -76,7 +77,7 @@ section > *{
 }
 .main{
     margin-top: 3.5rem;
-    padding: 1.5rem 20%;
+    padding: 1.5rem 15%;
 }
 #main{
     display: flex;
@@ -208,6 +209,12 @@ span.spec{
     align-items: center;
     flex-direction: row;
 }
+.flex-center-row-forever{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
 a.lang-ver{
     margin-left: .5rem;
     margin-right: .5rem;
@@ -306,9 +313,24 @@ img{
 .flex-center > img{
     margin: 1.5rem 0px;
 }
+
+p.my-description{
+    background-color: var(--third-color);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+div.my-pic{
+    margin:1.5rem;
+}
 div.my-pic > img.my-pic{
     width: 100%;
     border-radius: 50%;
+}
+
+p.vertical{
+    width: 40%;
+    margin:1.5rem;
 }
 
 
@@ -451,6 +473,23 @@ label.switch{
     html{
         scroll-padding-top: 6.7rem;
     }
+    section#about.flex-center-row{
+        flex-direction: column;
+    }
+    .flex-center-row{
+        flex-direction: column;
+    }
+    div.my-pic{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    div.my-pic > img.my-pic{
+        width: 50%;
+    }
+    p.vertical{
+        width: auto;
+    }
 }
 @media(max-width: 850px) {
     .main{
@@ -475,16 +514,5 @@ label.switch{
     }
     html{
         scroll-padding-top: 9.3rem;
-    }
-    section#about.flex-center-row{
-        flex-direction: column;
-    }
-    div.my-pic{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    div.my-pic > img.my-pic{
-        width: 50%;
     }
 }
