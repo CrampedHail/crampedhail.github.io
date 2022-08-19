@@ -168,7 +168,8 @@ ul{
     align-items: center;
 }
 li{
-    margin-bottom: 1rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -295,6 +296,7 @@ a.lang-ver{
 }
 .gallery > a{
     position:inherit;
+    cursor: pointer;
 }
 img.curr-img{
     width: 94%;
@@ -320,13 +322,17 @@ img{
 .flex-center > img{
     margin: 1.5rem 0px;
 }
-
+ul{
+    width: auto;
+}
+p,
+ul,
+tbody,
 p.my-description{
     background-color: var(--third-color);
     border-radius: 1rem;
     padding: 1rem;
 }
-
 div.my-pic{
     margin:1.5rem;
 }
@@ -413,8 +419,9 @@ label.switch{
   }
   
   /* Add a hover effect if you want */
-  .fa:hover {
-    opacity: 0.7;
+  .fa-socials:hover {
+    box-shadow: var(--background-color) 0px 0px 0px 3px,
+    var(--main-color) 0px 0px 0px 6px;
   }
   
   /* Set a specific color for each brand */
@@ -433,7 +440,6 @@ label.switch{
     font-size: 20px;
     width: 20px;
     height: 20px;
-    background: var(--background-color);
     color: var(--main-color);
   }
 
