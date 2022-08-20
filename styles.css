@@ -47,7 +47,6 @@ body{
     top:0;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    overflow: hidden;
     font-size: larger;
     box-shadow: 0 0 5px gray;
     background-color: var(--background-color);
@@ -467,6 +466,50 @@ label.switch{
 
 
 
+  /* Dropdown styles */
+  /* .dropbtn {
+    background-color: var(--background-color);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  } */
+  
+  .dropdown {
+    position: relative;
+    display: none;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:var(--background-color);
+    min-width: 13rem;
+    overflow: visible;
+    text-align: center;
+    box-shadow: 0 0 5px gray;
+    padding-top: .25rem;
+    padding-bottom: .5rem;
+    transform: translate(-7rem, -2rem);
+  }
+  
+  .dropdown-content a {
+    color: var(--main-color);
+    padding: 12px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:hover {background-color: var(--background-color);}
+  
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 
 
 
@@ -481,11 +524,11 @@ label.switch{
 } */
 @media(max-width: 1050px) {
     .main-link{
-        grid-column: 1 / span 4;
+        grid-column: 2 / span 3;
     }
     .navigation-bar{
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, 1fr);
     }
     .main{
         margin-top: 4.5rem;
@@ -511,29 +554,44 @@ label.switch{
     p.vertical{
         width: auto;
     }
+    .nav-link{
+        display: none;
+    }
+    .dropdown {
+        display: inline-block;
+    }
 }
+
+
+
 @media(max-width: 850px) {
     .main{
         margin-top: 5.5rem;
         padding: 1.5rem 10%;
     }
     html{
-        scroll-padding-top: 7.7rem;
+        scroll-padding-top: 4rem;
+    }
+    .dropdown-content {
+      transform: translate(-9rem, -2rem);
     }
 }
+
+
+
 @media(max-width: 780px){
-    .main-link{
+    /* .main-link{
         grid-column: 1 / span 2;
     }
     .navigation-bar{
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-    }
+        grid-template-rows: repeat(1, 1fr);
+    } */
     .main{
         margin-top: 8rem;
         padding: 1.5rem 5%;
     }
-    html{
-        scroll-padding-top: 9.3rem;
+    .dropdown-content {
+      transform: translate(-9.5rem, -2rem);
     }
 }
