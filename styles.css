@@ -92,6 +92,7 @@ h1.name{
 }
 h1{
     font-size: xx-large;
+    margin-top: 3rem;
 }
 h2{
     font-size: larger;
@@ -332,6 +333,9 @@ p.my-description{
     background-color: var(--third-color);
     border-radius: 1rem;
     padding: 1rem;
+}
+span{
+    text-align: center;
 }
 div.my-pic{
     margin:1.5rem;
