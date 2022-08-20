@@ -490,7 +490,7 @@ label.switch{
     box-shadow: 0 0 5px gray;
     padding-top: .25rem;
     padding-bottom: .5rem;
-    transform: translate(-7rem, -2rem);
+    transform: translate(-7rem, 0rem);
   }
   
   .dropdown-content a {
@@ -575,7 +575,7 @@ label.switch{
         scroll-padding-top: 4rem;
     }
     .dropdown-content {
-      transform: translate(-9rem, -2rem);
+      transform: translate(-9rem);
     }
 }
 
@@ -594,6 +594,6 @@ label.switch{
         padding: 1.5rem 5%;
     }
     .dropdown-content {
-      transform: translate(-9.5rem, -2rem);
+      transform: translate(-9.5rem);
     }
 }
