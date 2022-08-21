@@ -329,7 +329,8 @@ p,
 ul,
 tbody,
 p.my-description,
-div.education-grid{
+div.education-grid,
+div.contact-flex{
     background-color: var(--third-color);
     border-radius: 1rem;
     padding: 1rem;
@@ -348,6 +349,30 @@ div.education-grid > div.double-size{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+.contact-flex{
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap:.5rem;
+    max-width: 43rem;
+    width: fit-content;
+    margin-bottom: 2rem;
+}
+.contact-flex > div{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.contact-margin-top{
+    margin-top: 0rem;
+}
+.small-grid{
+    grid-column: 1 / 2;
+}
+.large-grid{
+    grid-column: 2 / span 2;
 }
 span{
     text-align: center;
@@ -507,6 +532,7 @@ label.switch{
     padding-top: .25rem;
     padding-bottom: .5rem;
     transform: translate(-7rem, 0rem);
+    border-radius: 1rem;
   }
   
   .dropdown-content a {
@@ -614,6 +640,18 @@ label.switch{
         justify-content: center;
         align-items: center;
         margin-top: .5rem;
+    }
+    .contact-flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 43rem;
+        width: fit-content;
+        margin-bottom: 2rem;
+    }
+    .contact-margin-top{
+        margin-top: 1rem;
     }
 }
 
