@@ -182,16 +182,11 @@ window.onload = function() {
 
 
 
+
+// Dropdown Handling
 let dropButton = document.getElementById("dropbtn");
 var myDropdown = document.getElementById("myDropdown");
-// function(){
-//     if (myDropdown.classList.contains('show')) {
-//         myDropdown.classList.remove('show');
-//     }
-//     if(dropButton.classList.contains('active')){
-//         dropButton.classList.remove('active');
-//     }
-// };
+
 myDropdown.onmouseleave = function(){
     if (myDropdown.classList.contains('show')) {
         myDropdown.classList.remove('show');
@@ -208,17 +203,24 @@ myDropdown.ontouchend = function(){
         dropButton.classList.remove('active');
     }
 };
+window.ontouchend = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+        }
+        if(dropButton.classList.contains('active')){
+            dropButton.classList.remove('active');
+        }
+    }
+  }
 
 
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
 function toggleShowDropdown() {
     myDropdown.classList.toggle("show");
     dropButton.classList.toggle("active");
   }
 
-  
-  // Close the dropdown if the user clicks outside of it
   window.onclick = function(e) {
     if (!e.target.matches('.dropbtn')) {
         var myDropdown = document.getElementById("myDropdown");
