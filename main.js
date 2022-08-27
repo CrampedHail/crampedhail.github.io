@@ -200,7 +200,7 @@ myDropdown.onmouseleave = function(){
         dropButton.classList.remove('active');
     }
 };
-myDropdown.ontouchcancel = function(){
+myDropdown.ontouchend = function(){
     if (myDropdown.classList.contains('show')) {
         myDropdown.classList.remove('show');
     }
