@@ -207,5 +207,8 @@ function toggleShowDropdown() {
       if (myDropdown.classList.contains('show')) {
         myDropdown.classList.remove('show');
       }
+      if(dropButton.classList.contains('active')){
+          dropButton.classList.remove('active');
+      }
     }
   }
