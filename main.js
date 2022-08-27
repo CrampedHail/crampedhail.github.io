@@ -203,7 +203,7 @@ var myDropdown = document.getElementById("myDropdown");
 //         dropButton.classList.remove('active');
 //     }
 // };
-window.ontouchmove, window.ontouchcancel,
+window.ontouchmove, window.ontouchstart,
 myDropdown.ontouchend, myDropdown.onmouseleave
  = function(e) {
     if (!e.target.matches('.dropbtn')) {
