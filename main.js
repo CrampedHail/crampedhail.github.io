@@ -205,7 +205,6 @@ myDropdown.ontouchend = function(){
 };
 window.ontouchend = function(e) {
     if (!e.target.matches('.dropbtn')) {
-        var myDropdown = document.getElementById("myDropdown");
         if (myDropdown.classList.contains('show')) {
             myDropdown.classList.remove('show');
         }
@@ -221,14 +220,14 @@ function toggleShowDropdown() {
     dropButton.classList.toggle("active");
   }
 
-  window.onclick = function(e) {
-    if (!e.target.matches('.dropbtn')) {
-        var myDropdown = document.getElementById("myDropdown");
-        if (myDropdown.classList.contains('show')) {
-            myDropdown.classList.remove('show');
-        }
-        if(dropButton.classList.contains('active')){
-            dropButton.classList.remove('active');
-        }
-    }
-  }
+//   window.onclick = function(e) {
+//     if (!e.target.matches('.dropbtn')) {
+//         var myDropdown = document.getElementById("myDropdown");
+//         if (myDropdown.classList.contains('show')) {
+//             myDropdown.classList.remove('show');
+//         }
+//         if(dropButton.classList.contains('active')){
+//             dropButton.classList.remove('active');
+//         }
+//     }
+//   }
