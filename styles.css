@@ -3,7 +3,7 @@
     --background-color: #F9F9F9;
     --main-color: #303030;
     --img-shadow-color: gray;
-    --secondary-color: #A0A0A0;
+    --secondary-color: #808080;
     --third-color: #DDDDDD;
     --gradient-color-1: red;
     --gradient-color-2: blue;
@@ -330,10 +330,23 @@ ul,
 tbody,
 p.my-description,
 div.education-grid,
-div.contact-flex{
+div.contact-flex,
+div.exp-grid{
     background-color: var(--third-color);
     border-radius: 1rem;
     padding: 1rem;
+}
+div.exp-grid{
+    display: grid;
+    place-content: center;
+    gap: .25rem 0rem;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    max-width: 90%;
+    width: max-content;
+    height: fit-content;
+    text-align: center;
+    margin-bottom: 1em;
 }
 div.education-grid{
     display: grid;
@@ -343,6 +356,8 @@ div.education-grid{
     grid-template-rows: repeat(3, 1fr);
     max-width: 43rem;
     width: max-content;
+    height: fit-content;
+    margin-bottom: 1em;
 }
 div.education-grid > div.double-size{
     grid-column: 2 / span 3;
@@ -383,6 +398,7 @@ div.my-pic{
 div.my-pic > img.my-pic{
     width: 100%;
     border-radius: 50%;
+    box-shadow: 0px 5px 15px var(--img-shadow-color);
 }
 
 div.flex-center.nested{
@@ -508,13 +524,16 @@ label.switch{
 
 
   /* Dropdown styles */
-  /* .dropbtn {
-    background-color: var(--background-color);
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  } */
+  .dropbtn{
+    padding: .2rem;
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: ease;
+  }
+  .dropbtn.active {
+    box-shadow: var(--background-color) 0px 0px 0px 3px,
+    var(--main-color) 0px 0px 0px 6px;
+  }
   
   .dropdown {
     position: relative;
@@ -522,6 +541,7 @@ label.switch{
   }
   
   .dropdown-content {
+    --yOffset: 1rem;
     display: none;
     position: absolute;
     background-color:var(--background-color);
@@ -531,7 +551,7 @@ label.switch{
     box-shadow: 0 0 5px gray;
     padding-top: .25rem;
     padding-bottom: .5rem;
-    transform: translate(-7rem, 0rem);
+    transform: translate(-7rem, var(--yOffset));
     border-radius: 1rem;
   }
   
@@ -591,6 +611,11 @@ label.switch{
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 4rem;
+        margin-bottom: 0px;
+    }
+    section#about > div.flex-center{
+        margin-top: 0px;
     }
     div.my-pic > img.my-pic{
         width: 50%;
@@ -617,7 +642,7 @@ label.switch{
         scroll-padding-top: 4rem;
     }
     .dropdown-content {
-      transform: translate(-9rem);
+      transform: translate(-9rem, var(--yOffset));
     }
     div.education-grid{
         grid-template-columns: repeat(3, 1fr);
@@ -670,6 +695,6 @@ label.switch{
         padding: 1.5rem 5%;
     }
     .dropdown-content {
-      transform: translate(-9.5rem);
+      transform: translate(-9.5rem, var(--yOffset));
     }
 }

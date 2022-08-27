@@ -77,7 +77,7 @@ themeSwitch.addEventListener('click', ()=>{
 function enableLightMode(){
     document.documentElement.style.setProperty('--background-color', '#F9F9F9');
     document.documentElement.style.setProperty('--main-color', '#303030');
-    document.documentElement.style.setProperty('--secondary-color', '#A0A0A0');
+    document.documentElement.style.setProperty('--secondary-color', '#808080');
     document.documentElement.style.setProperty('--third-color', '#E8E8E8');
     document.documentElement.style.setProperty('--gradient-color-1', 'red');
     document.documentElement.style.setProperty('--gradient-color-2', 'blue');
@@ -182,11 +182,23 @@ window.onload = function() {
 
 
 
+let dropButton = document.getElementById("dropbtn");
+var myDropdown = document.getElementById("myDropdown");
+myDropdown.onmouseleave = function(){
+    if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+    }
+    if(dropButton.classList.contains('active')){
+        dropButton.classList.remove('active');
+    }
+};
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function toggleShowDropdown() {
     document.getElementById("myDropdown").classList.toggle("show");
+    dropButton.classList.toggle("active");
   }
+
   
   // Close the dropdown if the user clicks outside of it
   window.onclick = function(e) {
