@@ -187,23 +187,25 @@ window.onload = function() {
 let dropButton = document.getElementById("dropbtn");
 var myDropdown = document.getElementById("myDropdown");
 
-myDropdown.onmouseleave = function(){
-    if (myDropdown.classList.contains('show')) {
-        myDropdown.classList.remove('show');
-    }
-    if(dropButton.classList.contains('active')){
-        dropButton.classList.remove('active');
-    }
-};
-myDropdown.ontouchend = function(){
-    if (myDropdown.classList.contains('show')) {
-        myDropdown.classList.remove('show');
-    }
-    if(dropButton.classList.contains('active')){
-        dropButton.classList.remove('active');
-    }
-};
-window.ontouchmove = function(e) {
+// myDropdown.onmouseleave = function(){
+//     if (myDropdown.classList.contains('show')) {
+//         myDropdown.classList.remove('show');
+//     }
+//     if(dropButton.classList.contains('active')){
+//         dropButton.classList.remove('active');
+//     }
+// };
+// myDropdown.ontouchend = function(){
+//     if (myDropdown.classList.contains('show')) {
+//         myDropdown.classList.remove('show');
+//     }
+//     if(dropButton.classList.contains('active')){
+//         dropButton.classList.remove('active');
+//     }
+// };
+window.ontouchmove, window.ontouchcancel,
+myDropdown.ontouchend, myDropdown.onmouseleave
+ = function(e) {
     if (!e.target.matches('.dropbtn')) {
         if (myDropdown.classList.contains('show')) {
             myDropdown.classList.remove('show');
@@ -219,15 +221,3 @@ function toggleShowDropdown() {
     myDropdown.classList.toggle("show");
     dropButton.classList.toggle("active");
   }
-
-//   window.onclick = function(e) {
-//     if (!e.target.matches('.dropbtn')) {
-//         var myDropdown = document.getElementById("myDropdown");
-//         if (myDropdown.classList.contains('show')) {
-//             myDropdown.classList.remove('show');
-//         }
-//         if(dropButton.classList.contains('active')){
-//             dropButton.classList.remove('active');
-//         }
-//     }
-//   }
