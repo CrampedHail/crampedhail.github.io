@@ -203,7 +203,7 @@ myDropdown.ontouchend = function(){
         dropButton.classList.remove('active');
     }
 };
-window.ontouchend = function(e) {
+window.ontouchmove = function(e) {
     if (!e.target.matches('.dropbtn')) {
         if (myDropdown.classList.contains('show')) {
             myDropdown.classList.remove('show');
