@@ -187,35 +187,20 @@ window.onload = function() {
 let dropButton = document.getElementById("dropbtn");
 var myDropdown = document.getElementById("myDropdown");
 
-// myDropdown.onmouseleave = function(){
-//     if (myDropdown.classList.contains('show')) {
-//         myDropdown.classList.remove('show');
-//     }
-//     if(dropButton.classList.contains('active')){
-//         dropButton.classList.remove('active');
-//     }
-// };
-// myDropdown.ontouchend = function(){
-//     if (myDropdown.classList.contains('show')) {
-//         myDropdown.classList.remove('show');
-//     }
-//     if(dropButton.classList.contains('active')){
-//         dropButton.classList.remove('active');
-//     }
-// };
 document.ontouchmove, document.ontouchstart,
 myDropdown.ontouchend, myDropdown.onmouseleave
  = function(e) {
-    if (!e.target.matches('.dropbtn')) {
-        if (myDropdown.classList.contains('show')) {
-            myDropdown.classList.remove('show');
-        }
-        if(dropButton.classList.contains('active')){
-            dropButton.classList.remove('active');
-        }
-    }
+    closeDropdown(e)
   }
 
+  function closeDropdown(e){
+    if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+    }
+    if(dropButton.classList.contains('active')){
+        dropButton.classList.remove('active');
+    }
+  }
 
 function toggleShowDropdown() {
     myDropdown.classList.toggle("show");
