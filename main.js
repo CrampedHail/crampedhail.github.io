@@ -187,7 +187,7 @@ window.onload = function() {
 let dropButton = document.getElementById("dropbtn");
 var myDropdown = document.getElementById("myDropdown");
 
-window.onscroll,
+window.ontouchmove,
 document.onscroll,
 document.ontouchmove, document.ontouchstart,
 myDropdown.ontouchend, myDropdown.onmouseleave

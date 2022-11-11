@@ -55,7 +55,6 @@ body{
     place-content: center;
     justify-items: center;
     align-items: center;
-    z-index: 1;
 }
 p{
     text-align: justify;
@@ -231,6 +230,7 @@ a.lang-ver{
     display: inline-block;
     width: 60px;
     height: 34px;
+    z-index: -1;
   }
   
   .switch input { 
@@ -622,38 +622,53 @@ label.switch{
   .dropdown {
     position: relative;
     display: none;
+    z-index: -1;
   }
   
   .dropdown-content {
-    --yOffset: 1rem;
-    display: none;
+    --yOffset: 9.1rem;
+    --width: 13rem;
     position: absolute;
     background-color:var(--background-color);
-    min-width: 13rem;
+    min-width: var(--width);
     overflow: visible;
     text-align: center;
-    box-shadow: 0 0 5px gray;
+    box-shadow: 2px -3px 0px 2px var(--background-color),
+    0px 1px 4px gray;
     padding-top: .25rem;
     padding-bottom: .5rem;
-    transform: translate(-7rem, var(--yOffset));
-    border-radius: 1rem;
-  }
-  
-  .dropdown-content a {
-    color: var(--main-color);
-    padding: 12px 16px;
-    text-decoration: none;
-  }
-  
-  .dropdown-content a:hover {background-color: var(--background-color);}
-  .dropbtn{
-    cursor: pointer;
-  }
-  .dropdown .dropdown-content.show {
+    transform: translateY( var(--yOffset))!important;
+    right: -13rem;
+    border-bottom-left-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all 350ms ease-in-out;
+    z-index: -1;
+  }
+  
+  .dropdown-content a {
+    color: var(--main-color);
+    padding: 4px 14px;
+    margin: 8px 0px;
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: var(--background-color);
+}
+  .dropbtn{
+    cursor: pointer;
+  }
+  .dropdown-content.show {
+    --xOffset: calc(10rem - var(--width));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 0rem;
+    /* transform: translate(var(--xOffset), var(--yOffset))!important; */
 }
 
 
@@ -807,7 +822,6 @@ label.switch{
         padding: 1.5rem 5%;
     }
     .dropdown-content {
-      transform: translate(-9.5rem, var(--yOffset));
     }
     .cv-grid{
         grid-template-columns: 85%;

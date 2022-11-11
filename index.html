@@ -24,7 +24,7 @@
 </head>
 <body onload="setTheme();">
     <header>
-        <nav class="navigation-bar">
+        <nav class="navigation-bar" onmouseleave="closeDropdown()">
             <a class="fancy-link main-link" href="#main">Strona Główna</a>
             <a class="fancy-link nav-link" href="#about">O mnie</a>
             <a class="fancy-link nav-link" href="#cv">Curriculum Vitae</a>
@@ -32,12 +32,12 @@
             <a class="fancy-link nav-link" href="#contact">Kontakt</a>
             <div class="dropdown">
                 <i class="fa fa-solid fa-bars dropbtn" id="dropbtn" onclick="toggleShowDropdown()"></i>
-                <div class="dropdown-content" id="myDropdown">
-                    <a class="fancy-link" onclick="closeDropdown()" href="#about">O mnie</a>
-                    <a class="fancy-link" onclick="closeDropdown()" href="#cv">Curriculum Vitae</a>
-                    <a class="fancy-link" onclick="closeDropdown()" href="#projects">Projekty</a>
-                    <a class="fancy-link" onclick="closeDropdown()" href="#contact">Kontakt</a>
-                </div>
+            </div>
+            <div class="dropdown-content" id="myDropdown">
+                <a class="fancy-link" onclick="closeDropdown()" href="#about">O mnie</a>
+                <a class="fancy-link" onclick="closeDropdown()" href="#cv">Curriculum Vitae</a>
+                <a class="fancy-link" onclick="closeDropdown()" href="#projects">Projekty</a>
+                <a class="fancy-link" onclick="closeDropdown()" href="#contact">Kontakt</a>
             </div>
         </nav>
     </header>

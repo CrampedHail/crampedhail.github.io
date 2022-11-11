@@ -24,21 +24,21 @@
 </head>
 <body onload="setTheme()">
     <header>
-        <nav class="navigation-bar">
+        <nav class="navigation-bar" onmouseleave="closeDropdown()">
             <a class="fancy-link main-link" href="#main">Main Page</a>
             <a class="fancy-link nav-link" href="#about">About</a>
             <a class="fancy-link nav-link" href="#cv">Curriculum Vitae</a>
             <a class="fancy-link nav-link" href="#projects">Projects</a>
             <a class="fancy-link nav-link" href="#contact">Contact</a>
             <div class="dropdown">
-                <i class="fa fa-solid fa-bars dropbtn" onclick="toggleShowDropdown()"></i>
-                <div class="dropdown-content" id="myDropdown">
-                    <a class="fancy-link" onclick="closeDropdown()" href="#about">About</a>
-                    <a class="fancy-link" onclick="closeDropdown()" href="#cv">Curriculum Vitae</a>
-                    <a class="fancy-link" onclick="closeDropdown()" href="#projects">Projects</a>
-                    <a class="fancy-link" onclick="closeDropdown()" href="#contact">Contact</a>
-                  </div>
+                <i class="fa fa-solid fa-bars dropbtn" id="dropbtn" onclick="toggleShowDropdown()"></i>
             </div>
+            <div class="dropdown-content" id="myDropdown">
+                <a class="fancy-link" onclick="closeDropdown()" href="#about">About</a>
+                <a class="fancy-link" onclick="closeDropdown()" href="#cv">Curriculum Vitae</a>
+                <a class="fancy-link" onclick="closeDropdown()" href="#projects">Projects</a>
+                <a class="fancy-link" onclick="closeDropdown()" href="#contact">Contact</a>
+              </div>
         </nav>
     </header>
     
