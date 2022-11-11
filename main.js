@@ -187,8 +187,8 @@ window.onload = function() {
 let dropButton = document.getElementById("dropbtn");
 var myDropdown = document.getElementById("myDropdown");
 
-window.addEventListener('scroll', closeDropdown())
-document.addEventListener('scroll', closeDropdown())
+window.onscroll,
+document.onscroll,
 document.ontouchmove, document.ontouchstart,
 myDropdown.ontouchend, myDropdown.onmouseleave
  = function() {
