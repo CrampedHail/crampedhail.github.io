@@ -187,13 +187,15 @@ window.onload = function() {
 let dropButton = document.getElementById("dropbtn");
 var myDropdown = document.getElementById("myDropdown");
 
+window.addEventListener('scroll', closeDropdown())
+document.addEventListener('scroll', closeDropdown())
 document.ontouchmove, document.ontouchstart,
 myDropdown.ontouchend, myDropdown.onmouseleave
- = function(e) {
-    closeDropdown(e)
+ = function() {
+    closeDropdown()
   }
 
-  function closeDropdown(e){
+  function closeDropdown(){
     if (myDropdown.classList.contains('show')) {
         myDropdown.classList.remove('show');
     }
