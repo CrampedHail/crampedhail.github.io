@@ -230,7 +230,6 @@ a.lang-ver{
     display: inline-block;
     width: 60px;
     height: 34px;
-    z-index: -1;
   }
   
   .switch input { 
