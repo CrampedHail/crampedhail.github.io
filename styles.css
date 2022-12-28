@@ -5,6 +5,7 @@
     --img-shadow-color: gray;
     --secondary-color: #808080;
     --third-color: #DDDDDD;
+    --fourth-color: #C0C0C0;
     --gradient-color-1: red;
     --gradient-color-2: blue;
     overscroll-behavior: none;
@@ -479,9 +480,13 @@ span{
 }
 div.my-pic{
     margin:1.5rem;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 div.my-pic > img.my-pic{
-    width: 100%;
+    width: 20rem;
     border-radius: 50%;
     box-shadow: 0px 5px 15px var(--img-shadow-color);
 }
@@ -563,13 +568,11 @@ label.switch{
     transition-timing-function: ease;
   }
   
-  /* Add a hover effect if you want */
   .fa-socials:hover {
     box-shadow: var(--background-color) 0px 0px 0px 3px,
     var(--main-color) 0px 0px 0px 6px;
   }
   
-  /* Set a specific color for each brand */
   
   /* GitHub */
   .fa-github {
@@ -616,8 +619,8 @@ label.switch{
     transition-timing-function: ease;
   }
   .dropbtn.active {
-    box-shadow: var(--background-color) 0px 0px 0px 3px,
-    var(--main-color) 0px 0px 0px 6px;
+    background-color: var(--fourth-color);
+    box-shadow: var(--fourth-color) 0px 0px 0px 4px;
   }
   
   .dropdown {
@@ -669,9 +672,46 @@ label.switch{
     justify-content: center;
     align-items: center;
     right: 0rem;
-    /* transform: translate(var(--xOffset), var(--yOffset))!important; */
 }
 
+
+ /* Connection Status Indicator */
+div#connectionIndicator{
+    top: .5rem;
+    right: .5rem;
+    position: fixed;
+    border-radius: 50%;
+    height: .5rem;
+    width: .5rem;
+    z-index: 2;
+}
+div#connectionIndicator.online{
+    background-color:limegreen;
+}
+div#connectionIndicator.offline{
+    background-color:red;
+}
+div#connectionIndicator > div{
+    display: none;
+}
+div#connectionIndicator.online:hover > div.online-description{
+    display: block;
+    background-color: var(--third-color);
+    border-radius: .5rem;
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    padding: .5rem 1rem;
+}
+div#connectionIndicator.offline:hover > div.offline-description{
+    display: block;
+    background-color: var(--third-color);
+    border-radius: .5rem;
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    padding: .5rem 1rem;
+}
 
 
 
@@ -719,6 +759,7 @@ label.switch{
     }
     div.my-pic > img.my-pic{
         width: 50%;
+        cursor: default;
     }
     p.vertical{
         width: auto;
