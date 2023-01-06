@@ -77,7 +77,8 @@ section > *{
 }
 .main{
     margin-top: 3.5rem;
-    padding: 1.5rem 15%;
+    padding: 0rem 15%;
+    padding-bottom: 1.5rem;
 }
 #main{
     display: flex;
@@ -232,6 +233,7 @@ a.lang-ver{
     display: inline-block;
     width: 60px;
     height: 34px;
+    cursor: pointer;
   }
   
   .switch input { 
@@ -736,7 +738,8 @@ div#connectionIndicator.offline:hover > div.offline-description{
     }
     .main{
         margin-top: 4.5rem;
-        padding: 1.5rem 15%;
+        padding: 0rem 15%;
+        padding-bottom: 1.5rem;
     }
     html{
         scroll-padding-top: 6.7rem;
@@ -805,7 +808,8 @@ div#connectionIndicator.offline:hover > div.offline-description{
 @media(max-width: 850px) {
     .main{
         margin-top: 4rem;
-        padding: 1.5rem 10%;
+        padding: 0rem 10%;
+        padding-bottom: 1.5rem;
     }
     html{
         scroll-padding-top: 4rem;
@@ -861,7 +865,8 @@ div#connectionIndicator.offline:hover > div.offline-description{
     } */
     .main{
         margin-top: 4rem;
-        padding: 1.5rem 5%;
+        padding: 0rem 5%;
+        padding-bottom: 1.5rem;
     }
     .dropdown-content {
     }
