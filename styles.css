@@ -58,7 +58,8 @@ body{
     align-items: center;
     z-index: 2;
 }
-p{
+p,
+span.p{
     text-align: justify;
     line-height: 1.6;
 }
@@ -491,6 +492,7 @@ div.my-pic > img.my-pic{
     width: 20rem;
     border-radius: 50%;
     box-shadow: 0px 5px 15px var(--img-shadow-color);
+    cursor: default;
 }
 
 div.flex-center.nested{
@@ -501,6 +503,47 @@ p.vertical{
     width: 40%;
     margin:1.5rem;
 }
+
+
+
+/* Accordion */
+.accordion {
+    font-family: Poppins;
+    background-color: var(--third-color);
+    color: var(--main-color);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border-radius: .75rem;
+  }
+  .accordion.active{
+    border-top-left-radius: .75rem;
+    border-top-right-radius: .75rem;
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+    background-color: var(--fourth-color);
+  }  
+  .accordion.active i.fa-caret-down{
+    rotate: 180deg;
+  }
+  .panel {
+    padding: 0 18px;
+    background-color: var(--third-color);
+    color: var(--main-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    border-bottom-left-radius: .75rem;
+    border-bottom-right-radius: .75rem;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+  }
+
 
 
 
@@ -557,6 +600,10 @@ label{
 label.switch{
     margin: 0rem .75rem;
 }
+
+
+
+
 .fa {
     padding: 0px;
     font-size: 30px;
@@ -574,9 +621,6 @@ label.switch{
     box-shadow: var(--background-color) 0px 0px 0px 3px,
     var(--main-color) 0px 0px 0px 6px;
   }
-  
-  
-  /* GitHub */
   .fa-github {
     padding: 0px;
     font-size: 75px;
