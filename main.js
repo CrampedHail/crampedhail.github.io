@@ -64,6 +64,20 @@ function currentImg(image, imgCollection){
 
 //Themes
 let darkMode = localStorage.getItem('darkmode');
+let sunIcon = document.querySelector('.fa-sun');
+sunIcon.addEventListener('click', () => {
+    if(darkMode=='enabled'){
+        enableLightMode();
+        themeSwitch.checked = false;
+    }
+});
+let moonIcon = document.querySelector('.fa-moon');
+moonIcon.addEventListener('click', () => {
+    if(darkMode=='disabled'){
+        enableDarkMode();
+        themeSwitch.checked = true;
+    }
+});
 let themeSwitch = document.querySelector('.theme-switch');
 themeSwitch.addEventListener('click', ()=>{
     if(themeSwitch.checked){
@@ -85,6 +99,7 @@ function enableLightMode(){
     document.documentElement.style.setProperty('--img-shadow-color', 'gray');
     document.documentElement.style.setProperty('--fourth-color', '#C0C0C0');
     localStorage.setItem('darkmode', 'disabled');
+    darkMode = localStorage.getItem('darkmode');
 }
 
 function enableDarkMode(){
@@ -98,10 +113,10 @@ function enableDarkMode(){
     document.documentElement.style.setProperty('--fourth-color', '#555555');
     document.documentElement.style.setProperty('color-scheme', 'dark light');
     localStorage.setItem('darkmode', 'enabled');
+    darkMode = localStorage.getItem('darkmode');
 }
 
 function setTheme(){
-    console.log(darkMode)
     if(darkMode=='disabled'){
         enableLightMode();
         themeSwitch.checked = false;
