@@ -523,12 +523,9 @@ p.vertical{
     font-size: 15px;
     transition: 0.4s;
     border-radius: .75rem;
+    z-index: 1;
   }
   .accordion.active{
-    border-top-left-radius: .75rem;
-    border-top-right-radius: .75rem;
-    border-bottom-left-radius: 0rem;
-    border-bottom-right-radius: 0rem;
     background-color: var(--fourth-color);
   }  
   .accordion.active i.fa-caret-down{
@@ -536,6 +533,7 @@ p.vertical{
   }
   .panel {
     padding: 0 18px;
+    padding-top: 1rem;
     background-color: var(--third-color);
     color: var(--main-color);
     max-height: 0;
@@ -545,6 +543,8 @@ p.vertical{
     border-bottom-right-radius: .75rem;
     border-top-left-radius: 0rem;
     border-top-right-radius: 0rem;
+    transform: translateY(-1rem);
+    z-index: 0;
   }
 
 
