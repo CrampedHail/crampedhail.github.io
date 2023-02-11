@@ -518,7 +518,7 @@ p.vertical{
     padding: 18px;
     width: 100%;
     border: none;
-    text-align: left;
+    text-align: center;
     outline: none;
     font-size: 15px;
     transition: 0.4s;
@@ -619,7 +619,9 @@ label.switch{
     transition-duration: 250ms;
     transition-timing-function: ease;
   }
-  
+  i.fa-sun,i.fa-moon{
+    cursor: pointer;
+  }
   .fa-socials:hover {
     box-shadow: var(--background-color) 0px 0px 0px 3px,
     var(--main-color) 0px 0px 0px 6px;
