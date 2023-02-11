@@ -101,6 +101,8 @@ h2{
 }
 h3{
     font-size: large;
+    margin: 0px;
+    margin-block-end: 0px!important;
 }
 h1, h2, h3{
     width: fit-content;
@@ -423,6 +425,7 @@ tbody,
 p.my-description,
 div.education-grid,
 div.contact-flex,
+div.employment-flex,
 div.exp-grid{
     background-color: var(--third-color);
     border-radius: 1rem;
@@ -480,6 +483,16 @@ div.education-grid > div.double-size{
 }
 .large-grid{
     grid-column: 2 / span 2;
+}
+.employment-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: fit-content;
+}
+.employment-flex > span > b{
+    font-weight: bolder;
 }
 span{
     text-align: center;
