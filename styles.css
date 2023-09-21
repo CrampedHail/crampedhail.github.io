@@ -391,6 +391,8 @@ ul{
 .cv-grid > .activities > div{
     display: flex;
     flex-direction: row;
+}.cv-grid > .activities > div > *{
+    width:50%;
 }
 div.cv-grid > div > h2{
     margin-top: 0px;
